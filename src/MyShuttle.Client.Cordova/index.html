@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MyShuttle Client</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700,400,600' rel='stylesheet' type='text/css'>
+    <link href="scripts/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="scripts/signature-pad/assets/jquery.signaturepad.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <ms-loader class="loader">
+        <div class="spinner">
+            <div class="spinner-container container1">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+            <div class="spinner-container container2">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+            <div class="spinner-container container3">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+        </div>
+    </ms-loader>
+
+    <section class="container main-content">
+        <header data-ng-include="'app/modules/core/views/header.html'" class="header row"></header>
+        <section data-ng-view class="view"></section>
+    </section>
+
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+    <!-- Thrid party dependencies -->
+    <script src="scripts/jquery/dist/jquery.js"></script>
+    <script src="scripts/angular/angular.js"></script>
+    <script src="scripts/angular-route/angular-route.js"></script>
+    <script src="scripts/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="scripts/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="scripts/moment/moment.js"></script>
+    <script src="scripts/angular-moment/angular-moment.js"></script>
+    <script src="scripts/signature-pad/jquery.signaturepad.js"></script>
+    <script src="scripts/MobileServices.Web-1.1.0.min.js"></script>
+    <script src="scripts/NotificationHub.js"></script>
+    <script src="https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&s=1" charset="UTF-8" type="text/javascript"></script>
+    <script src="scripts/signalr/jquery.signalR.js"></script>
+    <!-- App dependencies -->
+    <script src="app/config.js"></script>
+    <script src="app/application.js"></script>
+    <!-- Core Module dependencies -->
+    <script src="app/modules/core/core.js"></script>
+    <script src="app/modules/core/config/coreConfig.js"></script>
+    <script src="app/modules/core/config/coreRoutes.js"></script>
+    <script src="app/modules/core/config/coreRun.js"></script>
+    <script src="app/modules/core/directives/loader.js"></script>
+    <script src="app/modules/core/services/httpInterceptor.js"></script>
+    <script src="app/modules/core/services/messengerService.js"></script>
+    <script src="app/modules/core/services/settingsService.js"></script>
+    <script src="app/modules/core/services/navigationService.js"></script>
+    <script src="app/modules/core/services/storageService.js"></script>
+    <script src="app/modules/core/controllers/headerController.js"></script>
+    <!-- Rides Module dependencies -->
+    <script src="app/modules/rides/rides.js"></script>
+    <script src="app/modules/rides/config/ridesRoutes.js"></script>
+    <script src="app/modules/rides/controllers/homeController.js"></script>
+    <script src="app/modules/rides/controllers/serviceController.js"></script>
+    <script src="app/modules/rides/controllers/rideController.js"></script>
+    <script src="app/modules/rides/controllers/signatureController.js"></script>
+    <script src="app/modules/rides/services/dataService.js"></script>
+    <script src="app/modules/rides/services/modalService.js"></script>
+    <script src="app/modules/rides/services/pushNotificationsService.js"></script>
+    <script src="app/modules/rides/directives/bingMapsRoutes.js"></script>
+    <script src="app/modules/rides/directives/signaturePad.js"></script>
+    <script src="app/modules/rides/filters/imageBase64.js"></script>
+    <!-- Settings Module dependencies -->
+    <script src="app/modules/settings/settings.js"></script>
+    <script src="app/modules/settings/config/settingsRoutes.js"></script>
+    <script src="app/modules/settings/controllers/settingsController.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+﻿#fonts .primary {
+  color: #46d1b6;
+}
+#fonts .contrast {
+  color: #ffffff;
+  font-weight: 600;
+}
+#fonts .base {
+  color: #525e6f;
+  font-style: italic;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+#fonts .primary-label {
+  color: #525e6f;
+  font-style: italic;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #28a28b;
+}
+#fonts .summary-data {
+  color: #ffffff;
+  font-size: 2.1em;
+  font-weight: bold;
+}
+#fonts .secondary-data {
+  font-weight: bold;
+  font-size: 2.3em;
+}
+#fonts .primary-data {
+  color: #46d1b6;
+  font-size: 2em;
+}
+#fonts .no-data {
+  color: #dbddde;
+  font-style: italic;
+  font-weight: 600;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: #fbfbfb;
+  font-family: 'Open Sans', sans-serif;
+  color: #525e6f;
+}
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 0.7em 1em;
+  font-size: 1.3em;
+  color: #adadad;
+}
+.main-content {
+  width: 100%;
+  min-height: 100%;
+}
+.header {
+  background-color: #2f3c4c;
+  height: 7em;
+  line-height: 7em;
+  position: relative;
+  z-index: 2;
+}
+.header .logo {
+  max-width: 15em;
+  margin-left: 1em;
+}
+.menu-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 7em;
+}
+.button {
+  display: block;
+  text-align: center;
+}
+.button:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.button[disabled] {
+  opacity: 0.5;
+}
+.button.button-bottom {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.5em;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: table;
+}
+.button.button-bottom span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.button.primary {
+  background-color: #46d1b6;
+}
+.button.secondary {
+  background-color: #ff7f66;
+}
+.button.button-settings {
+  height: 100%;
+  text-align: center;
+}
+.button.button-settings img {
+  max-height: 100%;
+  max-width: 100%;
+  padding: 25px;
+}
+label {
+  color: #525e6f;
+  font-style: italic;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0;
+}
+.input-row {
+  padding-top: 2.5em;
+  padding-bottom: 1.5em;
+}
+.input-row label {
+  margin-bottom: 0.5em;
+}
+input.ng-invalid {
+  border: solid 1px #ff7f66;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 320px), only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 320px), only screen and (min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 192dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  /* Small screen, retina, stuff to override above media query */
+  body {
+    font-size: 11px;
+  }
+}

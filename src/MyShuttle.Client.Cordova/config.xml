@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="com.microsoft.myshuttle.hybrid" version="1.0.0.0" xmlns="http://www.w3.org/ns/widgets">
+  <name>Driver</name>
+  <description>
+    A blank project that uses Apache Cordova to help you build an app that targets multiple mobile platforms: Android, iOS, Windows, and Windows Phone.
+  </description>
+  <author href="http://cordova.io" email="dev@cordova.apache.org">
+    Apache Cordova Team
+  </author>
+  <content src="index.html" />
+  <access origin="*" />
+  <preference name="SplashScreen" value="screen" />
+  <preference name="Orientation" value="portrait" />
+  <preference name="Fullscreen" value="true" />
+  <preference name="DisallowOverscroll" value="true" />
+  <preference name="webviewbounce" value="false" />
+  <vs:plugin name="org.apache.cordova.device" version="0.2.10" />
+  <vs:plugin name="org.apache.cordova.vibration" version="0.3.9" />
+  <vs:plugin name="org.apache.cordova.dialogs" version="0.2.8" />
+  <vs:plugin name="com.phonegap.plugins.PushPlugin" version="2.4.0" />
+  <vs:platformSpecificValues />
+</widget>

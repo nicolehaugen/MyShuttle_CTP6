@@ -1,0 +1,15 @@
+{
+  "name": "signature-pad",
+  "homepage": "https://github.com/thomasjbradley/signature-pad",
+  "version": "2.5.1",
+  "_release": "2.5.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.5.1",
+    "commit": "33ebe1ecf4b303440f6d37bdff516bd77fd98ba7"
+  },
+  "_source": "git://github.com/thomasjbradley/signature-pad.git",
+  "_target": "~2.5.1",
+  "_originalSource": "signature-pad",
+  "_direct": true
+}

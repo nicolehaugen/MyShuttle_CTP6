@@ -1,0 +1,91 @@
+﻿#fonts .primary {
+  color: #46d1b6;
+}
+#fonts .contrast {
+  color: #ffffff;
+  font-weight: 600;
+}
+#fonts .base {
+  color: #525e6f;
+  font-style: italic;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+#fonts .primary-label {
+  color: #525e6f;
+  font-style: italic;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #28a28b;
+}
+#fonts .summary-data {
+  color: #ffffff;
+  font-size: 2.1em;
+  font-weight: bold;
+}
+#fonts .secondary-data {
+  font-weight: bold;
+  font-size: 2.3em;
+}
+#fonts .primary-data {
+  color: #46d1b6;
+  font-size: 2em;
+}
+#fonts .no-data {
+  color: #dbddde;
+  font-style: italic;
+  font-weight: 600;
+}
+.employee-row {
+  position: relative;
+}
+.employee-row .employee-info-col {
+  padding: 0.8em;
+  display: table;
+}
+.employee-row .employee-info-col .employee-img {
+  max-width: 6em;
+  border-radius: 50%;
+}
+.employee-row .employee-info-col .employee-data {
+  padding-left: 1em;
+  vertical-align: middle;
+  display: table-cell;
+  padding-right: 7em;
+}
+.employee-row .employee-info-col .employee-data.full-row {
+  padding-right: 0;
+}
+.employee-row .employee-info-col .employee-data p.employee-name {
+  color: #46d1b6;
+  font-size: 2em;
+  margin-bottom: 0.2em;
+  line-height: 1em;
+}
+.employee-row .employee-info-col .employee-data .employee-data-field {
+  font-weight: 600;
+}
+.employee-row .employee-info-col .employee-data .employee-data-field.data-highlighted {
+  color: #ff7f66;
+}
+.ride-request-content .request-bing-map {
+  height: 15em;
+  position: relative;
+}
+.ride-request-content .button-bottom {
+  position: relative;
+  height: 4em;
+}
+.modal-dialog {
+  margin: 1em;
+  margin-top: 5em;
+}
+.modal-dialog .modal-content {
+  border-radius: 0;
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 2em auto;
+  }
+}

@@ -1,0 +1,39 @@
+/// <reference path="../../../_app.ts" />
+/// <reference path="../../core/core.ts" />
+/// <reference path="../settings.ts" />
+
+module MyShuttle.Settings {
+    interface ISettingsControllerScope extends ng.IScope {
+        serviceUrl: string;
+        saveSettings(): void;
+    }
+
+    angularModule.controller('SettingsController', function (
+        $scope: ISettingsControllerScope,
+        settingsService: MyShuttle.Core.SettingsService,
+        storageService: MyShuttle.Core.StorageService,
+        messengerService: MyShuttle.Core.MessengerService,
+        navigationService: MyShuttle.Core.NavigationService) {
+
+        $scope.saveSettings = function () {
+            storageService.setValue('serviceUrl', $scope.serviceUrl);
+<<<<<<< HEAD
+=======
+            messengerService.send(messengerService.messageTypes.toggleNavigateBackVisibility);
+            messengerService.send(messengerService.messageTypes.settingsChanged);
+>>>>>>> 5904378f022c3732bc8d46e7c651ee2554b03597
+            navigationService.navigateBack();
+        };
+
+        var init = function () {
+            messengerService.send(messengerService.messageTypes.showNavigateBackBtn, { jumpToMainPage: false });
+            $scope.serviceUrl = settingsService.getMobileServiceUrl();
+
+            $scope.$on('$locationChangeStart', function (event) {
+                messengerService.send(messengerService.messageTypes.hideNavigateBackBtn);
+            });
+        }
+
+        init();
+    });
+}

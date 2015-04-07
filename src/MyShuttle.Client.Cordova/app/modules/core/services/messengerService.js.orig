@@ -1,0 +1,30 @@
+﻿var MyShuttle;
+(function (MyShuttle) {
+    (function (Core) {
+        var MessengerService = (function () {
+            function MessengerService($rootScope) {
+                this.$rootScope = $rootScope;
+                this.messageTypes = {
+                    startLoading: '_START_LOADING_',
+                    endLoading: '_END_LOADING_',
+<<<<<<< HEAD
+                    activateNavigateBack: '_ACTIVATE_NAVIGATE_BACK_',
+                    getSignature: '_GET_SIGNATURE_'
+=======
+                    toggleNavigateBackVisibility: '_TOGGLE_NAVIGATE_BACK_VISIBILITY_'
+>>>>>>> 51a26ce9aa7676fe5afb75f0a6f59e4866909554
+                };
+
+                return this;
+            }
+            MessengerService.prototype.send = function (message, data) {
+                this.$rootScope.$broadcast(message, data);
+            };
+            return MessengerService;
+        })();
+        Core.MessengerService = MessengerService;
+
+        Core.angularModule.service('messengerService', MessengerService);
+    })(MyShuttle.Core || (MyShuttle.Core = {}));
+    var Core = MyShuttle.Core;
+})(MyShuttle || (MyShuttle = {}));

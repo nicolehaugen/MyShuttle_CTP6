@@ -1,0 +1,15 @@
+﻿{
+    "DefaultAdminUsername": "administrator",
+    "DefaultAdminPassword": "P2ssw0rd0)",
+    "Data": {
+        "DefaultConnection": {
+            //"ConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=MyShuttle;Trusted_Connection=True;MultipleActiveResultSets=true"
+            "ConnectionString":  "data source=b9omldl8eq.database.windows.net;initial catalog=MyShuttleBiz2-Ignite_db;persist security info=True;user id=TestUser1;password=Admin_007;MultipleActiveResultSets=True"
+        }
+    },
+    "EntityFramework": {
+        "MyShuttleContext": {
+            "ConnectionStringKey": "Data:DefaultConnection:ConnectionString"
+        }
+    }
+}

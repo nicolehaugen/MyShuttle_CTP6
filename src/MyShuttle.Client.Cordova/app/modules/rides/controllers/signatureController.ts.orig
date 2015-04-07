@@ -1,0 +1,59 @@
+/// <reference path="../../../_app.ts" />
+/// <reference path="../rides.ts" />
+
+module MyShuttle.Rides {
+    interface ISignatureControllerScope extends ng.IScope {
+        email: string;
+        signature: string;
+        signatureForm: ng.IFormController;
+        sendRide(): void;
+    }
+
+    angularModule.controller('SignatureController', function (
+        $scope: ISignatureControllerScope,
+        dataService: MyShuttle.Rides.DataService,
+        navigationService: MyShuttle.Core.NavigationService,
+        messengerService: MyShuttle.Core.MessengerService,
+        params) {
+
+        var ride;
+
+        $scope.sendRide = function () {
+<<<<<<< HEAD
+            if (!$scope.signatureForm.$valid) return;
+
+            messengerService.send(messengerService.messageTypes.getSignature, function (signature) {
+                ride.signature = signature;
+                ride.employeeEmail = $scope.email;
+
+                messengerService.send(messengerService.messageTypes.startLoading);
+                dataService.addRide(ride).done(
+                    function () {
+                        messengerService.send(messengerService.messageTypes.endLoading);
+                        navigationService.navigateTo('');
+                    }, function () {
+                        messengerService.send(messengerService.messageTypes.endLoading);
+                        $scope.email = '';
+                        $scope.$digest();
+                    });
+            });
+=======
+            ride.employeeEmail = $scope.email;
+            dataService.addRide(ride).done(
+                function () {
+                    navigationService.navigateTo('home');
+                }, function () {
+                    $scope.email = '';
+                });
+>>>>>>> 51a26ce9aa7676fe5afb75f0a6f59e4866909554
+        }
+
+        var init = function () {
+            ride = params || {};
+            messengerService.send(messengerService.messageTypes.toggleNavigateBackVisibility, { jumpToMainPage: true });
+            $scope.email = '';
+        }
+
+        init();
+    });
+}

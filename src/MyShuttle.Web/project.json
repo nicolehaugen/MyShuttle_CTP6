@@ -1,0 +1,54 @@
+{
+    "authors": [
+        "Microsoft"
+    ],
+    "description": "MyShuttle",
+    "version": "1.0.0-beta3",
+    "compilationOptions": {
+        "warningsAsErrors": true
+    },
+    "webroot": "wwwroot",
+    "dependencies": {
+        "Kestrel": "1.0.0-beta3",
+        "Microsoft.AspNet.Mvc": "6.0.0-beta3",
+        "EntityFramework.InMemory": "7.0.0-beta3",
+        "EntityFramework.SqlServer": "7.0.0-beta3",
+        "Microsoft.AspNet.Identity.EntityFramework": "3.0.0-beta3",
+        "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-*",
+        "Microsoft.AspNet.Security.Cookies": "1.0.0-beta3",
+        "Microsoft.AspNet.Server.IIS": "1.0.0-beta3",
+        "Microsoft.AspNet.Server.WebListener": "1.0.0-beta3",
+        "Microsoft.AspNet.StaticFiles": "1.0.0-beta3",
+        "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-beta3",
+        "Microsoft.Framework.OptionsModel": "1.0.0-beta3",
+        "Microsoft.AspNet.Diagnostics": "1.0.0-beta3",
+        "Microsoft.AspNet.SignalR.Server": "3.0.0-beta3",
+        "Microsoft.CodeAnalysis.CSharp": "1.0.0-beta3",
+        "MyShuttle.API": "",
+        "MyShuttle.Data": "",
+        "MyShuttle.Model": ""
+    },
+    "commands": {
+        "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000",
+        "kestrel": "Microsoft.AspNet.Hosting --server Kestrel --server.urls http://localhost:5004"
+    },
+    "frameworks": {
+        "aspnet50": { },
+        "aspnetcore50": { }
+    },
+    "exclude": [
+        "wwwroot/**/*",
+        "node_modules/**/*",
+        "bower_components/**/*"
+    ],
+    "bundleExclude": [
+        "node_modules",
+        "bower_components",
+        "**.kproj",
+        "**.user",
+        "**.vspscc"
+    ],
+    "scripts": {
+        "postrestore": [ "npm install" ]
+    }
+}

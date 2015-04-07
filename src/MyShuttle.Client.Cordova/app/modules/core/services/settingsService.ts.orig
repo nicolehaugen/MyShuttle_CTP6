@@ -1,0 +1,70 @@
+﻿/// <reference path="../../../_app.ts" />
+/// <reference path="../core.ts" />
+
+module MyShuttle.Core {
+    export class Vehicle {
+        VehicleId: number;
+        Rate: number;
+    }
+
+    export class Coordinate {
+        latitude: number;
+        longitude: number;
+
+        constructor(latitude: number, longitude: number) {
+            this.latitude = latitude;
+            this.longitude = longitude;
+        }
+    }
+
+    export class SettingsService {
+        public bingMapsKey: string = 'AiOp5RxYtMGivuaQLXhKiGK4m2xBNk2WRXHWHPbXCVrCHvX2_ozTtMZPxtgO4QRO';
+        public fakeVehicle: Vehicle;
+        public fakeStartRideLocation: Coordinate;
+        public fakeEndRideLocation: Coordinate;
+        public defaultMobileServiceUrl: string;
+        public mobileServiceKey: string;
+        public fakeRideDistance: number;
+
+        constructor(private storageService: MyShuttle.Core.StorageService) {
+            this.fakeVehicle = new Vehicle();
+            this.fakeVehicle.VehicleId = 1;
+            this.fakeVehicle.Rate = 3;
+
+            var coord = new Coordinate(40.72109533886229, -74.006596745813);
+            this.fakeStartRideLocation = coord;
+            this.fakeEndRideLocation = coord;
+<<<<<<< HEAD
+            //this.fakeStartRideLocation = new Coordinate(40.786699, -73.968820);
+            //this.fakeEndRideLocation = new Coordinate(40.799224, -73.945389);
+=======
+
+            //this.fakeStartRideLocation = new Coordinate();
+            //this.fakeStartRideLocation.latitude = 40.786699;
+            //this.fakeStartRideLocation.longitude = -73.968820;
+            //this.fakeEndRideLocation = new Coordinate();
+            //this.fakeEndRideLocation.latitude = 40.799224;
+            //this.fakeEndRideLocation.longitude = -73.945389;
+
+            this.defaultMobileServiceUrl = 'https://myshuttledev.azure-mobile.net/';
+            this.mobileServiceKey = 'yBsktstcgoRetXKhtNSPJkIvkrtfCw22';
+>>>>>>> ce0576f340b4a4908d987bdf588bb69d19c6c472
+            this.fakeRideDistance = 0.1;
+
+            //this.mobileServiceUrl = storageService.getValue('serviceUrl', 'https://myshuttledev.azure-mobile.net/');
+            //this.mobileServiceKey = 'yBsktstcgoRetXKhtNSPJkIvkrtfCw22';
+            this.mobileServiceUrl = storageService.getValue('serviceUrl', 'http://localhost:35256/');
+            this.mobileServiceKey = '';
+
+            return this;
+        }
+
+        public getMobileServiceUrl = function() {
+            return this.storageService.getValue('serviceUrl', this.defaultMobileServiceUrl);  
+        };
+    }
+
+    angularModule.factory('settingsService', (storageService) => {
+        return new MyShuttle.Core.SettingsService(storageService);
+    });
+}
